@@ -1,0 +1,36 @@
+{% extends 'options/base2.html' %}
+
+{% block title %}Newsletter{% endblock %}
+
+{% block body_block %}
+	<head>
+  	<link href="/static/css/signin.css" rel="stylesheet">
+	</head>
+	
+	<br><br><br><br><br><br>
+    		<div>
+ 				{% if registered %}
+				<strong>Thank you for registering!</strong>
+				<a href="/options/index/">Return to the homepage.</a><br />
+		
+				{% else %}   
+    			<center>
+    			
+    			<form id="user_form" method="post" action="/options/email/" enctype="multipart/form-data">
+        			
+        			{% csrf_token %}
+					<h2>Register</h2>
+					<br>
+					<h4>Enter Your E-Mail Below:</h4>
+
+					{{ user_form.as_p }}
+
+        			<br><br>
+       				<input class="red" type="submit" name="submit" value="Register"/>
+        		</form>
+        	
+        		</center>
+      			
+				{% endif %}
+  			</div>
+{% endblock %}
