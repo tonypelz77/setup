@@ -26,7 +26,7 @@ TEMPLATE_DIRS = (
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '7c@y^hq*a!$q#qn7g&7-pm1i^9z0da1mog+)^f&x4@*%kl7x@9'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
